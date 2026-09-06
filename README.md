@@ -1,14 +1,24 @@
 # Namaz Times · Hubli
 
+[![Android](https://github.com/kuttappu507/namaz-times/actions/workflows/android.yml/badge.svg)](https://github.com/kuttappu507/namaz-times/actions/workflows/android.yml)
+[![iOS](https://github.com/kuttappu507/namaz-times/actions/workflows/ios.yml/badge.svg)](https://github.com/kuttappu507/namaz-times/actions/workflows/ios.yml)
+[![Latest release](https://img.shields.io/github/v/release/kuttappu507/namaz-times?label=download)](https://github.com/kuttappu507/namaz-times/releases/latest)
+
 A modern prayer-times app for **Android (Kotlin + Jetpack Compose, Material 3)** with a
 native **iPhone port (SwiftUI)** in [`ios/`](ios/README.md).
 All timings come from the bundled annual timetable for Hubli, Karnataka
 (`app/src/main/assets/namaz_timings.csv`) – the app works fully offline.
 
-**Ready-to-install Android builds:** [`release/`](release/)
-* `NamazTimes-Hubli-v1.3.1.apk` – **recommended**: release build, R8-optimised (1.3 MB),
+**Ready-to-install builds:** [GitHub Releases → v1.3.1](https://github.com/kuttappu507/namaz-times/releases/tag/v1.3.1)
+(also mirrored in [`release/`](release/))
+* `NamazTimes-Hubli-v1.3.1.apk` – **Android, recommended**: release build, R8-optimised (1.3 MB),
   signed with the debug key so it side-loads on any phone.
-* `NamazTimes-Hubli-v1.3.1-debug.apk` – debuggable build (17 MB, noticeably slower UI).
+* `NamazTimes-iOS-v1.3.1-unsigned.ipa` – **iPhone (iOS 17+)**, built by the `iOS` workflow with
+  signing disabled; sideload with Sideloadly / AltStore and a free Apple ID (see [`ios/README.md`](ios/README.md)).
+* `NamazTimes-Hubli-v1.3.1-debug.apk` – debuggable Android build (17 MB, noticeably slower UI).
+
+Every push to `main` rebuilds both apps on GitHub Actions (`Android` on Ubuntu, `iOS` on a macOS
+runner with Xcode 16.4); the fresh APK/IPA are attached to each run as artifacts.
 
 ## What's new in 1.3.1
 
