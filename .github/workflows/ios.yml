@@ -1,4 +1,4 @@
-# Builds the iPhone app on GitHub's free macOS runners.
+# Builds the iPhone app on GitHub's free macOS runners (macos-15 image, Xcode 16.4 / iOS 18.5 SDK).
 #
 #  • Every push / PR / manual run  → unit tests + an UNSIGNED .ipa (download from the run's
 #    "Artifacts" box; sideload with AltStore / Sideloadly using a free Apple ID).
@@ -48,7 +48,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Select Xcode
-        run: sudo xcode-select -s /Applications/Xcode_16.2.app && xcodebuild -version
+        run: sudo xcode-select -s /Applications/Xcode_16.4.app && xcodebuild -version
 
       - name: Generate Xcode project (if not committed)
         run: |
@@ -63,7 +63,7 @@ jobs:
           mkdir -p build
           xcodebuild test \
             -project "$PROJECT" -scheme "$SCHEME" \
-            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.5' \
             -derivedDataPath build/DerivedData \
             CODE_SIGNING_ALLOWED=NO \
             | tee build/test.log | xcbeautify --renderer github-actions
@@ -82,7 +82,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Select Xcode
-        run: sudo xcode-select -s /Applications/Xcode_16.2.app
+        run: sudo xcode-select -s /Applications/Xcode_16.4.app
 
       - name: Generate Xcode project (if not committed)
         run: |
@@ -132,7 +132,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Select Xcode
-        run: sudo xcode-select -s /Applications/Xcode_16.2.app
+        run: sudo xcode-select -s /Applications/Xcode_16.4.app
 
       - name: Generate Xcode project (if not committed)
         run: |
