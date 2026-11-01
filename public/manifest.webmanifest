@@ -1,0 +1,35 @@
+{
+  "id": "/",
+  "name": "Namaz Times · Hubli",
+  "short_name": "Namaz Times",
+  "description": "Prayer times for Hubli, Karnataka — the printed annual timetable, Hijri dates, live countdown, monthly view and reminders. Works fully offline.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0B1512",
+  "theme_color": "#06261E",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["lifestyle", "utilities"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

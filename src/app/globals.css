@@ -1,0 +1,334 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-surface-variant: var(--surface-variant);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-surface-lowest: var(--surface-lowest);
+  --color-surface-low: var(--surface-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-high: var(--surface-high);
+  --color-surface-highest: var(--surface-highest);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--on-secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-gold: var(--gold);
+  --color-gold-container: var(--gold-container);
+  --color-on-gold-container: var(--on-gold-container);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
+  --color-error-container: var(--error-container);
+  --color-on-error-container: var(--on-error-container);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* ---- Namaz Times · Hubli — deep emerald + warm gold (ported from ui/theme) ---- */
+:root {
+  --radius: 0.875rem;
+  --background: #f4faf6; /* Mist */
+  --foreground: #0a1410; /* Ink */
+  --surface: #f4faf6;
+  --on-surface: #0a1410;
+  --surface-variant: #dfebe5;
+  --on-surface-variant: #5c6b64; /* Slate */
+  --surface-lowest: #ffffff;
+  --surface-low: #eff6f2;
+  --surface-container: #eaf3ee; /* Mist2 */
+  --surface-high: #e3eee8;
+  --surface-highest: #dfebe5;
+  --primary: #0b7a5b; /* Emerald40 */
+  --on-primary: #ffffff;
+  --primary-container: #e2faf1; /* Emerald90 */
+  --on-primary-container: #06261e; /* Emerald10 */
+  --secondary: #8f6a05; /* Gold40 */
+  --on-secondary: #ffffff;
+  --secondary-container: #ffe7a6; /* Gold90 */
+  --on-secondary-container: #6b4e00; /* Gold30 */
+  --gold: #b8891a; /* Gold50 */
+  --gold-container: #fff3d2; /* Gold95 */
+  --on-gold-container: #6b4e00;
+  --outline: #7a8a82;
+  --outline-variant: #c6d3cc;
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #410002;
+  --card-grad-start: #ffffff;
+  --card-grad-end: #f0f7f3;
+  --nav-glass: rgba(255, 255, 255, 0.94);
+  --scrim-color: rgba(11, 122, 91, 0.1);
+}
+
+.dark {
+  --background: #0b1512;
+  --foreground: #e6efea;
+  --surface: #0b1512;
+  --on-surface: #e6efea;
+  --surface-variant: #2a3b34;
+  --on-surface-variant: #b9c7bf;
+  --surface-lowest: #070e0b;
+  --surface-low: #131e19;
+  --surface-container: #182620;
+  --surface-high: #213129;
+  --surface-highest: #2a3b34;
+  --primary: #4ccba6; /* Emerald70 */
+  --on-primary: #06261e;
+  --primary-container: #0b5f49; /* Emerald30 */
+  --on-primary-container: #c3f3e2; /* Emerald90 */
+  --secondary: #f5c451; /* Gold80 */
+  --on-secondary: #6b4e00;
+  --secondary-container: #4a3900;
+  --on-secondary-container: #ffe7a6;
+  --gold: #f5c451;
+  --gold-container: #3f3000;
+  --on-gold-container: #ffe7a6;
+  --outline: #8e9c95;
+  --outline-variant: #283a33;
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+  --on-error-container: #ffdad6;
+  --card-grad-start: #1b2a25;
+  --card-grad-end: #14211c;
+  --nav-glass: rgba(27, 42, 37, 0.96);
+  --scrim-color: rgba(0, 0, 0, 0.38);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-outfit), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--primary) 28%, transparent);
+}
+
+/* Slim, styled scrollbars for the long lists */
+.nice-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--primary) 35%, transparent) transparent;
+}
+.nice-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.nice-scroll::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--primary) 30%, transparent);
+  border-radius: 999px;
+}
+.nice-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ------------------------- Ambient effects ------------------------- */
+
+/* Diagonal shine sweeping across the hero card (ShimmerOverlay) */
+@keyframes namaz-shimmer {
+  0% {
+    transform: translateX(-70%);
+  }
+  100% {
+    transform: translateX(245%);
+  }
+}
+.shimmer-band {
+  position: absolute;
+  top: -30%;
+  bottom: -30%;
+  width: 34%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.17) 45%,
+    rgba(255, 255, 255, 0.17) 55%,
+    transparent 100%
+  );
+  animation: namaz-shimmer 3.6s linear infinite;
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Gentle breathing scale (Modifier.breathe) */
+@keyframes namaz-breathe {
+  0%,
+  100% {
+    transform: scale(var(--breathe-min, 0.97));
+  }
+  50% {
+    transform: scale(var(--breathe-max, 1.03));
+  }
+}
+.breathe {
+  animation: namaz-breathe var(--breathe-dur, 2.6s) ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Slowly drifting ambient light orbs (AmbientOrbs) */
+@keyframes namaz-orb-x {
+  0% {
+    left: 12%;
+  }
+  50% {
+    left: 78%;
+  }
+  100% {
+    left: 12%;
+  }
+}
+@keyframes namaz-orb-y {
+  0% {
+    top: 18%;
+  }
+  50% {
+    top: 66%;
+  }
+  100% {
+    top: 18%;
+  }
+}
+.orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(34px);
+  pointer-events: none;
+  will-change: left, top;
+}
+.orb-x {
+  animation: namaz-orb-x var(--orb-dur-x, 9s) ease-in-out infinite;
+}
+.orb-y {
+  animation: namaz-orb-y var(--orb-dur-y, 7.3s) ease-in-out infinite;
+}
+
+/* Twinkling starfield */
+@keyframes namaz-twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+.star {
+  position: absolute;
+  border-radius: 9999px;
+  background: #fff;
+  animation: namaz-twinkle var(--tw-dur, 4s) ease-in-out infinite;
+  animation-delay: var(--tw-delay, 0s);
+  pointer-events: none;
+}
+
+/* Pulsing glow border on the NEXT card (NextGlow) */
+@keyframes namaz-pulse {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.next-glow {
+  animation: namaz-pulse 1.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Blinking "live" dot next to Now · Fajr */
+@keyframes namaz-live {
+  0%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+}
+.live-dot {
+  animation: namaz-live 1.4s ease-in-out infinite;
+}
+
+/* Title letter cascade used by the splash */
+@keyframes namaz-cascade {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-up entrance (staggeredEntrance) */
+@keyframes namaz-enter {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.enter {
+  opacity: 0;
+  animation: namaz-enter 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--enter-delay, 0ms);
+}
+.enter-done {
+  opacity: 1;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .shimmer-band,
+  .breathe,
+  .orb-x,
+  .orb-y,
+  .star,
+  .next-glow,
+  .live-dot {
+    animation: none !important;
+  }
+  .enter {
+    opacity: 1;
+    animation: none !important;
+  }
+}
+
+/* Safe-area helpers for the floating nav on notched phones */
+.pb-safe-nav {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 88px);
+}
+.bottom-safe-nav {
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 14px);
+}
