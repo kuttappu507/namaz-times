@@ -152,14 +152,14 @@ function MonthHeader({
       </IconButton>
       <div className="min-w-0 flex-1 text-center">
         <div className="flex items-baseline justify-center">
-          <h2 className="text-[26px] font-semibold" style={{ color: "var(--on-surface)" }}>
+          <h2 className="text-[28px] font-semibold" style={{ color: "var(--on-surface)" }}>
             {monthName}
           </h2>
-          <span className="ml-1.5 text-[19px] font-semibold" style={{ color: "var(--gold)" }}>
+          <span className="ml-1.5 text-[21px] font-semibold" style={{ color: "var(--gold)" }}>
             {year}
           </span>
         </div>
-        <p className="truncate text-[13px]" style={{ color: "var(--on-surface-variant)" }}>
+        <p className="truncate text-[14px]" style={{ color: "var(--on-surface-variant)" }}>
           {hijriRange}
         </p>
       </div>
@@ -223,9 +223,9 @@ function ColumnHeaders({ madhabLabel }: { madhabLabel: string }) {
           style={{ width: `${(COLUMN_WEIGHTS[i] / 7.4) * 100}%` }}
           className={i === 0 ? "text-left" : "text-center"}
         >
-          <span className="text-[13px] font-medium whitespace-nowrap text-white">{label}</span>
+          <span className="text-[14px] font-medium whitespace-nowrap text-white">{label}</span>
           {label === "Asr" && (
-            <span className="block text-[10px] whitespace-nowrap text-white/80">{madhabLabel}</span>
+            <span className="block text-[11px] whitespace-nowrap text-white/80">{madhabLabel}</span>
           )}
         </div>
       ))}
@@ -336,7 +336,7 @@ function DayRow({
       <div style={{ width: `${(COLUMN_WEIGHTS[0] / 7.4) * 100}%` }} className="min-w-0">
         <div className="flex items-center">
           <span
-            className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[13px] font-bold"
+            className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[14px] font-bold"
             style={{
               background: isToday
                 ? "rgba(255,255,255,0.22)"
@@ -348,11 +348,11 @@ function DayRow({
           >
             {day.day}
           </span>
-          <span className="ml-1.5 truncate text-[12px] font-medium" style={{ color: isFriday && !isToday ? "var(--on-gold-container)" : fgMuted }}>
+          <span className="ml-1.5 truncate text-[13px] font-medium" style={{ color: isFriday && !isToday ? "var(--on-gold-container)" : fgMuted }}>
             {weekday}
           </span>
         </div>
-        <p className="mt-0.5 pl-0.5 text-[10px] tracking-[0.2px]" style={{ color: fgMuted }}>
+        <p className="mt-0.5 pl-0.5 text-[11px] tracking-[0.2px]" style={{ color: fgMuted }}>
           {hijri.day} {hijriMonthShort(hijri)}
         </p>
       </div>
@@ -366,7 +366,7 @@ function DayRow({
               color: p.id === "SUNRISE" ? fgMuted : fg,
               fontWeight: isToday ? 600 : 500,
             }}
-            className="text-center text-[14px] whitespace-nowrap"
+            className="text-center text-[15px] whitespace-nowrap"
           >
             {timeNumber(minutes, use24)}
           </span>

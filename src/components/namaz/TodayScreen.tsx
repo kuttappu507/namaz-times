@@ -103,13 +103,13 @@ function Header({ state }: { state: TodayState }) {
   return (
     <div className="flex items-center px-0.5">
       <div className="min-w-0 flex-1">
-        <p className="text-[15px] font-medium" style={{ color: "var(--primary)" }}>
+        <p className="text-[16px] font-medium" style={{ color: "var(--primary)" }}>
           Assalamu Alaikum · {greeting}
         </p>
-        <h1 className="mt-0.5 truncate text-[31px] leading-10 font-semibold" style={{ color: "var(--on-surface)" }}>
+        <h1 className="mt-0.5 truncate text-[33px] leading-11 font-semibold" style={{ color: "var(--on-surface)" }}>
           {formatLongDate(state.now)}
         </h1>
-        <p className="mt-0.5 truncate text-[15px]" style={{ color: "var(--on-surface-variant)" }}>
+        <p className="mt-0.5 truncate text-[16px]" style={{ color: "var(--on-surface-variant)" }}>
           {hijriFormatted(state.hijri)}  ·  {hijriMonthArabic(state.hijri)}
         </p>
       </div>
@@ -118,7 +118,7 @@ function Header({ state }: { state: TodayState }) {
         style={{ background: "var(--primary-container)" }}
       >
         <MapPin size={16} style={{ color: "var(--on-primary-container)" }} />
-        <span className="text-[15px] font-medium" style={{ color: "var(--on-primary-container)" }}>
+        <span className="text-[16px] font-medium" style={{ color: "var(--on-primary-container)" }}>
           Hubli
         </span>
       </div>
@@ -212,21 +212,21 @@ function HeroCard({ state, settings }: { state: TodayState; settings: UserSettin
                 exit={{ y: -26, opacity: 0 }}
                 transition={{ duration: 0.32, ease: [0.33, 1, 0.68, 1] }}
               >
-                <p className="text-[37px] leading-[46px] font-bold text-white">
+                <p className="text-[39px] leading-[48px] font-bold text-white">
                   {nextName}
                 </p>
-                <p className="text-[18px] font-semibold" style={{ color: palette.accent }}>
+                <p className="text-[20px] font-semibold" style={{ color: palette.accent }}>
                   {arabicName}
                 </p>
               </motion.div>
             </AnimatePresence>
           </div>
           <div className="mt-2.5 flex items-baseline">
-            <span className="text-[35px] leading-[44px] font-semibold text-white">
+            <span className="text-[37px] leading-[46px] font-semibold text-white">
               {timeNumber(nextMinutes, use24)}
             </span>
             {!use24 && (
-              <span className="ml-1.5 pb-1 text-[15px] font-medium text-white/85">
+              <span className="ml-1.5 pb-1 text-[16px] font-medium text-white/85">
                 {amPm(nextMinutes, use24)}
               </span>
             )}
@@ -237,7 +237,7 @@ function HeroCard({ state, settings }: { state: TodayState; settings: UserSettin
               style={{ background: palette.accent }}
               aria-hidden
             />
-            <span className="ml-2 text-[15px] text-white/85">{currentLabel}</span>
+            <span className="ml-2 text-[16px] text-white/85">{currentLabel}</span>
           </div>
         </div>
         <CountdownRing
@@ -343,7 +343,7 @@ function PrayerList({
             <button
               type="button"
               onClick={onOpenSettings}
-              className="block cursor-pointer px-1.5 py-1 text-left text-[13px]"
+              className="block cursor-pointer px-1.5 py-1 text-left text-[14px]"
               style={{ color: "var(--on-surface-variant)" }}
             >
               Asr per {madhab === "HANAFI" ? "Hanafi" : "Shafi'i"} school · change in Settings
@@ -434,7 +434,7 @@ function PrayerCard({
           />
           <div className="ml-3.5 min-w-0 flex-1">
             <div className="flex items-center gap-2">
-              <span className="text-[19px] font-semibold" style={{ color: textColor }}>
+              <span className="text-[21px] font-semibold" style={{ color: textColor }}>
                 {name}
               </span>
               {isCurrent && isSalah && (
@@ -442,7 +442,7 @@ function PrayerCard({
               )}
               {isNext && <Pill text="NEXT" container="var(--primary)" content="var(--on-primary)" />}
             </div>
-            <p className="text-[13px]" style={{ color: "var(--on-surface-variant)" }}>
+            <p className="text-[14px]" style={{ color: "var(--on-surface-variant)" }}>
               {note ??
                 (prayer === "SUNRISE" ? "Marks the end of Fajr" : PRAYERS.find((p) => p.id === prayer)?.arabicName)}
             </p>
@@ -453,11 +453,11 @@ function PrayerCard({
             <BellOff size={18} style={{ color: "var(--outline-variant)" }} />
           )}
           <div className="ml-3.5 flex items-baseline">
-            <span className="text-[24px] font-bold" style={{ color: textColor }}>
+            <span className="text-[26px] font-bold" style={{ color: textColor }}>
               {time}
             </span>
             {amPmLabel && (
-              <span className="ml-[3px] pb-[3px] text-[12px] font-medium" style={{ color: "var(--on-surface-variant)" }}>
+              <span className="ml-[3px] pb-[3px] text-[13px] font-medium" style={{ color: "var(--on-surface-variant)" }}>
                 {amPmLabel}
               </span>
             )}
@@ -480,7 +480,7 @@ function WarningCard({ text }: { text: string }) {
       role="alert"
     >
       <TriangleAlert size={20} />
-      <p className="text-[15px]">{text}</p>
+      <p className="text-[16px]">{text}</p>
     </div>
   );
 }

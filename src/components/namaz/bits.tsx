@@ -45,7 +45,7 @@ export function Pill({
 }) {
   return (
     <span
-      className="inline-flex items-center rounded-full px-2.5 py-[3px] text-[12px] font-semibold tracking-[1px] whitespace-nowrap"
+      className="inline-flex items-center rounded-full px-2.5 py-[3px] text-[13px] font-semibold tracking-[1px] whitespace-nowrap"
       style={
         outlined
           ? { border: `1px solid ${content}`, color: content }
@@ -68,7 +68,7 @@ export function SectionHeader({
   return (
     <div className="flex items-center justify-between px-1">
       <div>
-        <h2 className="text-[19px] font-semibold" style={{ color: "var(--on-surface)" }}>
+        <h2 className="text-[20px] font-semibold" style={{ color: "var(--on-surface)" }}>
           {title}
         </h2>
         <div

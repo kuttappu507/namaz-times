@@ -268,8 +268,8 @@ export function CountdownRing({
         )}
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <RollingDigits text={label} className="text-[22px] font-bold tracking-wide text-white" />
-        <span className="text-[11px] font-medium text-white/75">remaining</span>
+        <RollingDigits text={label} className="text-[24px] font-bold tracking-wide text-white" />
+        <span className="text-[12px] font-medium text-white/75">remaining</span>
       </div>
     </div>
   );

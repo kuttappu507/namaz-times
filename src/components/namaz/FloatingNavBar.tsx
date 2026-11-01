@@ -77,7 +77,7 @@ export function FloatingNavBar({
                 />
               </motion.span>
               <span
-                className="text-[12px] font-medium tracking-[0.3px]"
+                className="text-[13px] font-medium tracking-[0.3px]"
                 style={{ color: isSel ? "var(--on-primary)" : "var(--on-surface-variant)" }}
               >
                 {tab.label}
