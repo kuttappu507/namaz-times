@@ -216,7 +216,9 @@ function Pager({
               transform: `translateX(calc(${(i - tab) * 100}% + ${dragX}px)) scale(${1 - 0.05 * d})`,
               transition: dragging ? "none" : "transform 0.34s cubic-bezier(0.22, 1, 0.36, 1)",
               paddingTop: "env(safe-area-inset-top, 0px)",
-              paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 88px)",
+              // Transparent bottom nav: content stays visible all the way to the
+              // screen bottom — only keep the notch inset + a small whisker.
+              paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 10px)",
             }}
             aria-hidden={!active}
           >

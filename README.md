@@ -4,11 +4,13 @@ The **Namaz Times · Hubli** prayer-times app as an installable **React (Next.js
 the same deep-emerald + warm-gold design, the same bundled Hubli timetable, the same
 offline behaviour, now in the browser for **Android and iPhone**.
 
-**Live: https://hubli.vercel.app**
+**Live: https://namaz-times1.vercel.app**
 
-> 📱 The original native apps (Android: Kotlin + Jetpack Compose, iOS: SwiftUI) live on
-> the [`native-apps`](https://github.com/kuttappu507/namaz-times/tree/native-apps) branch
-> and in [Releases](https://github.com/kuttappu507/namaz-times/releases).
+> 📱 The **native Android app** (Kotlin + Jetpack Compose) lives in this repo under
+> [`android/`](android/) — full source plus a ready-made APK in
+> [`android/release/`](android/release/). The SwiftUI iPhone app and CI workflows stay
+> on the [`native-apps`](https://github.com/kuttappu507/namaz-times/tree/native-apps)
+> branch and in [Releases](https://github.com/kuttappu507/namaz-times/releases).
 
 ## Install on your phone
 

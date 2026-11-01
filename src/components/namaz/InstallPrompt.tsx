@@ -193,16 +193,16 @@ export function InstallSheet({
                   style={{ boxShadow: "0 8px 20px rgba(11,122,91,0.35)" }}
                 />
                 <div>
-                  <p className="text-lg leading-6 font-semibold" style={{ color: "var(--on-surface)" }}>
+                  <p className="text-[19px] leading-7 font-semibold" style={{ color: "var(--on-surface)" }}>
                     Install Namaz Times
                   </p>
-                  <p className="text-xs" style={{ color: "var(--on-surface-variant)" }}>
+                  <p className="text-[13px]" style={{ color: "var(--on-surface-variant)" }}>
                     Namaz Times · Hubli — offline timetable
                   </p>
                 </div>
               </div>
 
-              <p className="mt-3 text-sm leading-5" style={{ color: "var(--on-surface-variant)" }}>
+              <p className="mt-3 text-[15px] leading-6" style={{ color: "var(--on-surface-variant)" }}>
                 Add the app to your home screen for a full-screen experience, live prayer alerts
                 and instant offline access.
               </p>
@@ -233,7 +233,7 @@ export function InstallSheet({
                   <button
                     type="button"
                     onClick={onDismiss}
-                    className="h-11 w-full cursor-pointer rounded-full text-sm font-semibold"
+                    className="h-11 w-full cursor-pointer rounded-full text-[15px] font-semibold"
                     style={{
                       background: "var(--surface-highest)",
                       color: "var(--on-surface-variant)",
@@ -246,7 +246,7 @@ export function InstallSheet({
                   <button
                     type="button"
                     onClick={onInstall}
-                    className="flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-full text-sm font-semibold"
+                    className="flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-full text-[15px] font-semibold"
                     style={{
                       background: "linear-gradient(90deg, var(--primary), color-mix(in srgb, var(--primary) 82%, transparent))",
                       color: "var(--on-primary)",
@@ -275,7 +275,7 @@ function IOSStep({ n, children }: { n: number; children: React.ReactNode }) {
       >
         {n}
       </span>
-      <p className="text-sm leading-5" style={{ color: "var(--on-surface-variant)" }}>
+      <p className="text-[15px] leading-6" style={{ color: "var(--on-surface-variant)" }}>
         {children}
       </p>
     </li>
@@ -284,7 +284,7 @@ function IOSStep({ n, children }: { n: number; children: React.ReactNode }) {
 
 function Benefit({ children }: { children: React.ReactNode }) {
   return (
-    <li className="flex items-center gap-2 text-sm" style={{ color: "var(--on-surface-variant)" }}>
+    <li className="flex items-center gap-2 text-[15px]" style={{ color: "var(--on-surface-variant)" }}>
       <span
         className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full"
         style={{ background: "var(--primary-container)" }}

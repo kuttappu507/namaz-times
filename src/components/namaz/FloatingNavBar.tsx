@@ -26,15 +26,15 @@ export function FloatingNavBar({
       aria-label="Main navigation"
       className="bottom-safe-nav fixed left-1/2 z-50 -translate-x-1/2 rounded-full"
       style={{
-        filter: "drop-shadow(0 10px 24px rgba(11,122,91,0.30))",
+        filter: "drop-shadow(0 10px 24px rgba(11,122,91,0.20))",
       }}
     >
       <div
         className="relative flex rounded-full p-[5px]"
         style={{
           background: "var(--nav-glass)",
-          backdropFilter: "blur(18px)",
-          WebkitBackdropFilter: "blur(18px)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
           border: "1px solid var(--outline-variant)",
         }}
       >
@@ -77,7 +77,7 @@ export function FloatingNavBar({
                 />
               </motion.span>
               <span
-                className="text-[11px] font-medium tracking-[0.3px]"
+                className="text-[12px] font-medium tracking-[0.3px]"
                 style={{ color: isSel ? "var(--on-primary)" : "var(--on-surface-variant)" }}
               >
                 {tab.label}

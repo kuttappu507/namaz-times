@@ -71,7 +71,7 @@
   --on-error-container: #410002;
   --card-grad-start: #ffffff;
   --card-grad-end: #f0f7f3;
-  --nav-glass: rgba(255, 255, 255, 0.94);
+  --nav-glass: rgba(255, 255, 255, 0.32);
   --scrim-color: rgba(11, 122, 91, 0.1);
 }
 
@@ -106,7 +106,7 @@
   --on-error-container: #ffdad6;
   --card-grad-start: #1b2a25;
   --card-grad-end: #14211c;
-  --nav-glass: rgba(27, 42, 37, 0.96);
+  --nav-glass: rgba(18, 30, 25, 0.40);
   --scrim-color: rgba(0, 0, 0, 0.38);
 }
 
@@ -327,7 +327,9 @@ body {
 
 /* Safe-area helpers for the floating nav on notched phones */
 .pb-safe-nav {
-  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 88px);
+  /* Content must stay visible down to the screen bottom, behind the
+     transparent floating nav — only keep the notch inset + a whisker. */
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
 }
 .bottom-safe-nav {
   bottom: calc(env(safe-area-inset-bottom, 0px) + 14px);

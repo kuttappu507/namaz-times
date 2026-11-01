@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Namaz Times</string>
+    <string name="city_name">Hubli</string>
+    <string name="city_region">Hubli, Karnataka</string>
+    <string name="greeting">Assalamu Alaikum</string>
+    <string name="channel_prayer_name">Prayer times</string>
+    <string name="channel_prayer_desc">Notifies you when a prayer time begins</string>
+    <string name="channel_reminder_name">Prayer reminders</string>
+    <string name="channel_reminder_desc">Reminds you a few minutes before a prayer</string>
+    <string name="nav_today">Today</string>
+    <string name="nav_monthly">Monthly</string>
+    <string name="nav_settings">Settings</string>
+</resources>

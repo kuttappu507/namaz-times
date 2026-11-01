@@ -46,10 +46,10 @@ export function SettingsScreen({
     <div className="nice-scroll h-full overflow-y-auto px-[18px] pt-3 pb-7">
       <Stagger index={0}>
         <div className="px-1 pb-1">
-          <h1 className="text-[28px] leading-9 font-semibold" style={{ color: "var(--on-surface)" }}>
+          <h1 className="text-[31px] leading-10 font-semibold" style={{ color: "var(--on-surface)" }}>
             Settings
           </h1>
-          <p className="text-sm" style={{ color: "var(--on-surface-variant)" }}>
+          <p className="text-[15px]" style={{ color: "var(--on-surface-variant)" }}>
             Personalise alerts and display
           </p>
         </div>
@@ -91,7 +91,7 @@ export function SettingsScreen({
                   )}
                   <ThinDivider className="mt-2" />
                   <p
-                    className="px-[18px] pt-3 pb-0.5 text-xs font-semibold tracking-[1px]"
+                    className="px-[18px] pt-3 pb-0.5 text-[13px] font-semibold tracking-[1px]"
                     style={{ color: "var(--on-surface-variant)" }}
                   >
                     NOTIFY ME FOR
@@ -108,10 +108,10 @@ export function SettingsScreen({
                       >
                         <PrayerIconBadge prayer={p.id} size={34} active={on} />
                         <div className="ml-3.5 min-w-0 flex-1">
-                          <p className="text-base" style={{ color: "var(--on-surface)" }}>
+                          <p className="text-[17px]" style={{ color: "var(--on-surface)" }}>
                             {p.displayName}
                           </p>
-                          <p className="text-xs" style={{ color: "var(--on-surface-variant)" }}>
+                          <p className="text-[13px]" style={{ color: "var(--on-surface-variant)" }}>
                             {p.isSalah ? p.arabicName : "Marks the end of Fajr"}
                           </p>
                         </div>
@@ -158,7 +158,7 @@ export function SettingsScreen({
                 onChange={(v) => update({ madhab: v as UserSettings["madhab"] })}
                 ariaLabel="Asr school"
               />
-              <p className="mt-2.5 text-xs" style={{ color: "var(--on-surface-variant)" }}>
+              <p className="mt-2.5 text-[13px]" style={{ color: "var(--on-surface-variant)" }}>
                 {MADHAB_DESCRIPTION[settings.madhab]}
               </p>
             </div>
@@ -181,7 +181,7 @@ export function SettingsScreen({
               />
               <ThinDivider />
               <div className="p-[18px]">
-                <p className="text-base" style={{ color: "var(--on-surface)" }}>
+                <p className="text-[17px]" style={{ color: "var(--on-surface)" }}>
                   Theme
                 </p>
                 <div className="mt-2.5">
@@ -200,10 +200,10 @@ export function SettingsScreen({
               <ThinDivider />
               <div className="flex items-center px-[18px] py-3.5">
                 <div className="min-w-0 flex-1">
-                  <p className="text-base" style={{ color: "var(--on-surface)" }}>
+                  <p className="text-[17px]" style={{ color: "var(--on-surface)" }}>
                     Hijri date adjustment
                   </p>
-                  <p className="text-xs" style={{ color: "var(--on-surface-variant)" }}>
+                  <p className="text-[13px]" style={{ color: "var(--on-surface-variant)" }}>
                     Today: {hijriFormatted(hijriFrom(today, settings.hijriAdjustment))}
                   </p>
                 </div>
@@ -218,7 +218,7 @@ export function SettingsScreen({
                   className="mx-2 flex h-[38px] w-11 items-center justify-center rounded-full"
                   style={{ background: "var(--surface-highest)" }}
                 >
-                  <span className="text-base font-semibold" style={{ color: "var(--on-surface)" }}>
+                  <span className="text-[17px] font-semibold" style={{ color: "var(--on-surface)" }}>
                     {(settings.hijriAdjustment > 0 ? "+" : "") + settings.hijriAdjustment}
                   </span>
                 </div>
@@ -252,7 +252,7 @@ export function SettingsScreen({
                 <button
                   type="button"
                   onClick={onInstall}
-                  className="cursor-pointer rounded-full px-4 py-2 text-sm font-semibold"
+                  className="cursor-pointer rounded-full px-4 py-2 text-[15px] font-semibold"
                   style={{ background: "var(--primary)", color: "var(--on-primary)" }}
                 >
                   Install
@@ -276,13 +276,13 @@ export function SettingsScreen({
                 <Info size={20} className="text-white" />
               </div>
               <div className="ml-3.5">
-                <p className="text-[17px] font-semibold" style={{ color: "var(--on-surface)" }}>
+                <p className="text-[19px] font-semibold" style={{ color: "var(--on-surface)" }}>
                   Namaz Times · Hubli
                 </p>
-                <p className="text-[11px] font-medium" style={{ color: "var(--gold)" }}>
+                <p className="text-[12px] font-medium" style={{ color: "var(--gold)" }}>
                   Version 1.0.0 (Web)
                 </p>
-                <p className="mt-1.5 text-xs leading-5" style={{ color: "var(--on-surface-variant)" }}>
+                <p className="mt-1.5 text-[13px] leading-[21px]" style={{ color: "var(--on-surface-variant)" }}>
                   Timings are taken from the printed annual timetable for Hubli, Karnataka. The
                   sheet lists odd dates; a date that is not printed uses the previous printed
                   day&apos;s times exactly as on the sheet. Hijri dates follow the Umm al-Qura
@@ -297,7 +297,7 @@ export function SettingsScreen({
 
       {/* Reset (handy on web) */}
       <Stagger index={6}>
-        <p className="mx-auto mt-5 block text-center text-xs font-medium" style={{ color: "var(--on-surface-variant)" }}>
+        <p className="mx-auto mt-5 block text-center text-[13px] font-medium" style={{ color: "var(--on-surface-variant)" }}>
           Settings are saved on this device
         </p>
       </Stagger>
@@ -310,7 +310,7 @@ export function SettingsScreen({
 function SectionTitle({ text }: { text: string }) {
   return (
     <p
-      className="px-1.5 pt-2 pb-2 text-xs font-semibold tracking-[1px] uppercase"
+      className="px-1.5 pt-2 pb-2 text-[13px] font-semibold tracking-[1px] uppercase"
       style={{ color: "var(--primary)" }}
     >
       {text}
@@ -388,11 +388,11 @@ function SwitchRow({
     >
       {icon && <span className="mr-3 flex">{icon}</span>}
       <div className="min-w-0 flex-1">
-        <p className="text-base" style={{ color: "var(--on-surface)" }}>
+        <p className="text-[17px]" style={{ color: "var(--on-surface)" }}>
           {title}
         </p>
         {subtitle && (
-          <p className="text-xs" style={{ color: "var(--on-surface-variant)" }}>
+          <p className="text-[13px]" style={{ color: "var(--on-surface-variant)" }}>
             {subtitle}
           </p>
         )}
@@ -423,12 +423,12 @@ function WarningRow({
     >
       <TriangleAlert size={20} style={{ color: "var(--on-error-container)" }} />
       <p
-        className="ml-2.5 min-w-0 flex-1 text-xs"
+        className="ml-2.5 min-w-0 flex-1 text-[13px]"
         style={{ color: "var(--on-error-container)" }}
       >
         {text}
       </p>
-      <span className="text-sm font-semibold" style={{ color: "var(--primary)" }}>
+      <span className="text-[15px] font-semibold" style={{ color: "var(--primary)" }}>
         {action}
       </span>
     </div>
@@ -445,10 +445,10 @@ function ReminderRow({
   const options = [0, 5, 10, 15, 30];
   return (
     <div className="px-[18px] py-3">
-      <p className="text-base" style={{ color: "var(--on-surface)" }}>
+      <p className="text-[17px]" style={{ color: "var(--on-surface)" }}>
         Remind me before
       </p>
-      <p className="text-xs" style={{ color: "var(--on-surface-variant)" }}>
+      <p className="text-[13px]" style={{ color: "var(--on-surface-variant)" }}>
         {minutes === 0 ? "Only at prayer time" : `${minutes} minutes before each prayer`}
       </p>
       <div
@@ -466,7 +466,7 @@ function ReminderRow({
               role="radio"
               aria-checked={selected}
               onClick={() => onMinutes(m)}
-              className="flex-1 cursor-pointer rounded-full text-sm font-medium transition-colors duration-200"
+              className="flex-1 cursor-pointer rounded-full text-[15px] font-medium transition-colors duration-200"
               style={{
                 background: selected ? "var(--primary)" : "transparent",
                 color: selected ? "var(--on-primary)" : "var(--on-surface-variant)",
@@ -508,7 +508,7 @@ function Segmented({
             role="radio"
             aria-checked={selected}
             onClick={() => onChange(o.value)}
-            className="relative flex-1 cursor-pointer rounded-full text-sm font-semibold transition-colors duration-200"
+            className="relative flex-1 cursor-pointer rounded-full text-[15px] font-semibold transition-colors duration-200"
             style={{
               background: selected ? "var(--primary)" : "transparent",
               color: selected ? "var(--on-primary)" : "var(--on-surface-variant)",
